@@ -31,5 +31,5 @@ jobs:
         with:
           app-name: "marketingjumpstart-cms"
           slot-name: "production"
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_c56a6737472d49d6879690d291333e67 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FBBCD15313964754AD5B64A36976CD01 }}
           package: .
