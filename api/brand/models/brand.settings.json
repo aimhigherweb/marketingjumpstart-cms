@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "brands",
+  "info": {
+    "name": "Brand"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clients": {
+      "via": "brands",
+      "collection": "client",
+      "dominant": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "brand_id": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "google_ads": {
+      "via": "brand",
+      "collection": "google-ads"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_advertising_campaign_performances",
+  "info": {
+    "name": "Campaign Performance",
+    "icon": "chart-line"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "ad_group": {
+      "type": "string"
+    },
+    "ad": {
+      "type": "component",
+      "repeatable": false,
+      "component": "advertising.ad"
+    },
+    "clicks": {
+      "type": "integer"
+    },
+    "impressions": {
+      "type": "integer"
+    },
+    "ctr": {
+      "type": "decimal"
+    },
+    "avg_cpc": {
+      "type": "decimal"
+    }
+  }
+}

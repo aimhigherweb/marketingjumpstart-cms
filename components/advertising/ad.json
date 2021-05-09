@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_advertising_ads",
+  "info": {
+    "name": "Ad",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

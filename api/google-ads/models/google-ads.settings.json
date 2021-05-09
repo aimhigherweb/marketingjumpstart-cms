@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "google_ads",
+  "info": {
+    "name": "Google Ads"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "brand": {
+      "model": "brand",
+      "via": "google_ads"
+    },
+    "clicks": {
+      "type": "integer"
+    },
+    "avg_cpc": {
+      "type": "decimal"
+    },
+    "impressions": {
+      "type": "biginteger"
+    },
+    "avg_cpm": {
+      "type": "decimal"
+    },
+    "campaign_performance": {
+      "type": "component",
+      "repeatable": true,
+      "component": "advertising.campaign-performance"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    }
+  }
+}
