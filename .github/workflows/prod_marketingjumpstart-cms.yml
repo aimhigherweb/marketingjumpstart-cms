@@ -1,7 +1,7 @@
-# Docs for the Azure Web Apps Deploy action: https://go.microsoft.com/fwlink/?linkid=2134798
-# More GitHub Actions for Azure: https://go.microsoft.com/fwlink/?linkid=2135048
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Azure App Service - marketingjumpstart-cms(Production), Build and deploy NodeJS app
+name: Build and deploy Node.js app to Azure Web App - marketingjumpstart-cms
 
 on:
   push:
@@ -26,10 +26,10 @@ jobs:
           npm run build --if-present
           npm run test --if-present
 
-      - name: Run Azure webapp deploy action using publish profile credentials
+      - name: "Deploy to Azure Web App"
         uses: azure/webapps-deploy@v2
         with:
-          app-name: marketingjumpstart-cms
-          slot-name: Production
+          app-name: "marketingjumpstart-cms"
+          slot-name: "production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FBBCD15313964754AD5B64A36976CD01 }}
           package: .
