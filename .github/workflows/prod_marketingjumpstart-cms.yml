@@ -49,6 +49,9 @@ jobs:
         with:
           name: node-app
 
+      - name: unzip folder
+        run: unzip ./marketingjumpstart-cms.zip
+
       - name: "Deploy to Azure Web App"
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
