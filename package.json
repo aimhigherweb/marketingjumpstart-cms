@@ -7,7 +7,6 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
     "strapi": "^3.6.1",
     "strapi-admin": "^3.6.1",
