@@ -23,6 +23,11 @@
     "brands": {
       "via": "clients",
       "collection": "brand"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
     }
   }
 }

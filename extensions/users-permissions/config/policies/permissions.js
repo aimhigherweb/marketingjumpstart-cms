@@ -10,12 +10,6 @@ module.exports = async (ctx, next) => {
 		return next();
 	}
 
-	// add the detection of `token` query parameter
-	// console.log(await strapi.plugins[
-	// 	'users-permissions'
-	// ].services.jwt.getToken(ctx))
-	// console.log(ctx.request.header.authorization)
-
 	if (
 		(ctx?.request?.header?.authorization) ||
 		(ctx?.request?.query?.token)
@@ -33,8 +27,6 @@ module.exports = async (ctx, next) => {
 					token: authToken
 				});
 
-				// console.log(token)
-
 				if (!token) {
 					throw new Error(`Invalid token: This token doesn't exist`);
 				} else {
@@ -49,13 +41,20 @@ module.exports = async (ctx, next) => {
 				// use the current system with JWT in the header
 				const authToken = ctx?.request?.header?.authorization.replace('Bearer ', '')
 
+
 				const [token] = await strapi.query('token').find({
 					token: authToken
 				});
 
 				if(token) {
-					if (token.user && typeof token.token === 'string') {
-						id = token.user.id;
+					
+					if(typeof token.token === 'string') {
+						if (token.users_permissions_user) {
+							id = token.users_permissions_user.id;
+						}
+						else if (token.user) {
+							id = token.user.id;
+						}
 					}
 					isAdmin = false;
 				}
@@ -73,8 +72,8 @@ module.exports = async (ctx, next) => {
 					id = decrypted.id;
 					isAdmin = decrypted.isAdmin || false;
 				}
-			}			
-
+			}
+			
 			// this is the line that already exist in the code
 			if (id === undefined) {
 				throw new Error('Invalid token: Token did not contain required fields');
