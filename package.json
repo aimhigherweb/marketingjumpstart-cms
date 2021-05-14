@@ -5,7 +5,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "clean": "rm -rf .cache build exports"
   },
   "dependencies": {
     "strapi": "^3.6.1",
