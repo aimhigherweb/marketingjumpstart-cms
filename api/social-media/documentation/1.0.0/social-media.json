@@ -584,6 +584,18 @@
               }
             }
           },
+          "due": {
+            "type": "string",
+            "format": "date"
+          },
+          "start": {
+            "type": "string",
+            "format": "date"
+          },
+          "title": {
+            "type": "string",
+            "default": "Social Media Approvals"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -604,6 +616,18 @@
           },
           "brand": {
             "type": "string"
+          },
+          "due": {
+            "type": "string",
+            "format": "date"
+          },
+          "start": {
+            "type": "string",
+            "format": "date"
+          },
+          "title": {
+            "type": "string",
+            "default": "Social Media Approvals"
           },
           "published_at": {
             "type": "string",

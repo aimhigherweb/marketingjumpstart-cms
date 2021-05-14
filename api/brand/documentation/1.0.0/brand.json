@@ -627,6 +627,15 @@
                 "brand": {
                   "type": "string"
                 },
+                "due": {
+                  "type": "string"
+                },
+                "start": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
