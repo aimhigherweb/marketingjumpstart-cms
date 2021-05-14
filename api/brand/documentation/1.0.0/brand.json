@@ -529,49 +529,6 @@
           "brand_id": {
             "type": "uid"
           },
-          "google_ads": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "brand": {
-                  "type": "string"
-                },
-                "clicks": {
-                  "type": "integer"
-                },
-                "avg_cpc": {
-                  "type": "number"
-                },
-                "impressions": {
-                  "type": "integer"
-                },
-                "avg_cpm": {
-                  "type": "number"
-                },
-                "campaign_performance": {
-                  "type": "component"
-                },
-                "start_date": {
-                  "type": "string"
-                },
-                "end_date": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "social_media": {
             "type": "array",
             "items": {
@@ -599,6 +556,12 @@
                   "type": "string"
                 },
                 "title": {
+                  "type": "string"
+                },
+                "approved_by": {
+                  "type": "string"
+                },
+                "approved_date": {
                   "type": "string"
                 },
                 "published_at": {
@@ -682,6 +645,10 @@
           },
           "google_analytics": {
             "type": "string"
+          },
+          "analytics_v4": {
+            "type": "boolean",
+            "default": false
           }
         }
       },
@@ -696,12 +663,6 @@
           "brand_id": {
             "type": "uid"
           },
-          "google_ads": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "social_media": {
             "type": "array",
             "items": {
@@ -710,6 +671,10 @@
           },
           "google_analytics": {
             "type": "string"
+          },
+          "analytics_v4": {
+            "type": "boolean",
+            "default": false
           },
           "created_by": {
             "type": "string"

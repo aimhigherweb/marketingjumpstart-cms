@@ -34,6 +34,12 @@
     "title": {
       "type": "string",
       "default": "Social Media Approvals"
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "approved_date": {
+      "type": "date"
     }
   }
 }

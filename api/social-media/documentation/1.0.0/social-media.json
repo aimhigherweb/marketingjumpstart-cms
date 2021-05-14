@@ -558,12 +558,6 @@
               "brand_id": {
                 "type": "uid"
               },
-              "google_ads": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "social_media": {
                 "type": "array",
                 "items": {
@@ -575,6 +569,9 @@
               },
               "google_analytics": {
                 "type": "string"
+              },
+              "analytics_v4": {
+                "type": "boolean"
               },
               "created_by": {
                 "type": "string"
@@ -595,6 +592,13 @@
           "title": {
             "type": "string",
             "default": "Social Media Approvals"
+          },
+          "approved_by": {
+            "type": "string"
+          },
+          "approved_date": {
+            "type": "string",
+            "format": "date"
           },
           "published_at": {
             "type": "string",
@@ -628,6 +632,13 @@
           "title": {
             "type": "string",
             "default": "Social Media Approvals"
+          },
+          "approved_by": {
+            "type": "string"
+          },
+          "approved_date": {
+            "type": "string",
+            "format": "date"
           },
           "published_at": {
             "type": "string",

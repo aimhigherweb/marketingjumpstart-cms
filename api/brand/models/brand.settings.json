@@ -20,10 +20,6 @@
       "targetField": "name",
       "required": true
     },
-    "google_ads": {
-      "via": "brand",
-      "collection": "google-ads"
-    },
     "social_media": {
       "via": "brand",
       "collection": "social-media"
@@ -41,6 +37,10 @@
     "google_analytics": {
       "type": "string",
       "unique": true
+    },
+    "analytics_v4": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
