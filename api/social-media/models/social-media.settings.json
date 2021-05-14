@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "social_medias",
+  "info": {
+    "name": "Social Media"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "folder": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "approved": {
+      "type": "boolean",
+      "default": false
+    },
+    "brand": {
+      "model": "brand",
+      "via": "social_media"
+    }
+  }
+}

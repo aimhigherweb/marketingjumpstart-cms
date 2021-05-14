@@ -606,6 +606,38 @@
                 }
               }
             }
+          },
+          "social_media": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "folder"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "folder": {
+                  "type": "string"
+                },
+                "approved": {
+                  "type": "boolean"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -627,6 +659,12 @@
             "type": "uid"
           },
           "google_ads": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "social_media": {
             "type": "array",
             "items": {
               "type": "string"

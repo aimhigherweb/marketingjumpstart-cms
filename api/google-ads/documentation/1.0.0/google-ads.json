@@ -562,6 +562,12 @@
                   "type": "string"
                 }
               },
+              "social_media": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },

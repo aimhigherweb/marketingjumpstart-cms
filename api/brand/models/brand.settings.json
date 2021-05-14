@@ -27,6 +27,10 @@
     "google_ads": {
       "via": "brand",
       "collection": "google-ads"
+    },
+    "social_media": {
+      "via": "brand",
+      "collection": "social-media"
     }
   }
 }

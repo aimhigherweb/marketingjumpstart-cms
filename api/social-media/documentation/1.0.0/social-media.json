@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/clients": {
+    "/social-medias": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Client"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Social-media"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Client"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewClient"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/clients/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Social-media"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewSocial-media"
+              }
+            }
+          }
+        }
       }
     },
-    "/clients/{id}": {
+    "/social-medias/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Social-media"
+        ],
+        "parameters": []
+      }
+    },
+    "/social-medias/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Social-media"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Client"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Social-media"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClient"
+                "$ref": "#/components/schemas/NewSocial-media"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Client"
+          "Social-media"
         ],
         "parameters": [
           {
@@ -514,89 +527,87 @@
   },
   "components": {
     "schemas": {
-      "Client": {
+      "Social-media": {
         "required": [
           "id",
-          "slug"
+          "folder"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
+          "folder": {
             "type": "string"
           },
-          "email": {
-            "type": "string"
+          "approved": {
+            "type": "boolean",
+            "default": false
           },
-          "brands": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "brand_id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "clients": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "name": {
-                  "type": "string"
-                },
-                "brand_id": {
-                  "type": "uid"
-                },
-                "google_ads": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "social_media": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+          "brand": {
+            "required": [
+              "id",
+              "brand_id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "clients": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "name": {
+                "type": "string"
+              },
+              "brand_id": {
+                "type": "uid"
+              },
+              "google_ads": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "social_media": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
-          "slug": {
-            "type": "uid"
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
-      "NewClient": {
+      "NewSocial-media": {
         "required": [
-          "slug"
+          "folder"
         ],
         "properties": {
-          "name": {
+          "folder": {
             "type": "string"
           },
-          "email": {
+          "approved": {
+            "type": "boolean",
+            "default": false
+          },
+          "brand": {
             "type": "string"
           },
-          "brands": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "slug": {
-            "type": "uid"
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -608,9 +619,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Client"
-    }
-  ]
+  "tags": []
 }
