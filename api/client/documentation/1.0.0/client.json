@@ -564,6 +564,9 @@
                     "type": "string"
                   }
                 },
+                "logo": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },

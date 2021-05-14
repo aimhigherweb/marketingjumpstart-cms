@@ -22,8 +22,8 @@
       "default": false
     },
     "brand": {
-      "model": "brand",
-      "via": "social_media"
+      "via": "social_media",
+      "model": "brand"
     },
     "due": {
       "type": "date"

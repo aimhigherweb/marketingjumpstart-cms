@@ -12,8 +12,8 @@
   "pluginOptions": {},
   "attributes": {
     "brand": {
-      "model": "brand",
-      "via": "google_ads"
+      "via": "google_ads",
+      "model": "brand"
     },
     "clicks": {
       "type": "integer"
