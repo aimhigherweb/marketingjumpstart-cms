@@ -552,12 +552,6 @@
               "id": {
                 "type": "string"
               },
-              "clients": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "name": {
                 "type": "string"
               },
@@ -577,6 +571,9 @@
                 }
               },
               "logo": {
+                "type": "string"
+              },
+              "google_analytics": {
                 "type": "string"
               },
               "created_by": {

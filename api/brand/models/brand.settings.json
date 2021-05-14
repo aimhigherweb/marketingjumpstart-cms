@@ -12,11 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "clients": {
-      "via": "brands",
-      "collection": "client",
-      "dominant": true
-    },
     "name": {
       "type": "string"
     },
@@ -42,6 +37,10 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "google_analytics": {
+      "type": "string",
+      "unique": true
     }
   }
 }

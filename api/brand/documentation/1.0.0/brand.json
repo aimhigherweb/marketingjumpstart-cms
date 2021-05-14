@@ -523,41 +523,6 @@
           "id": {
             "type": "string"
           },
-          "clients": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "slug"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "brands": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "slug": {
-                  "type": "uid"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "name": {
             "type": "string"
           },
@@ -714,6 +679,9 @@
                 "type": "string"
               }
             }
+          },
+          "google_analytics": {
+            "type": "string"
           }
         }
       },
@@ -722,12 +690,6 @@
           "brand_id"
         ],
         "properties": {
-          "clients": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "name": {
             "type": "string"
           },
@@ -745,6 +707,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "google_analytics": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
