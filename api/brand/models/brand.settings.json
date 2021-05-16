@@ -41,6 +41,10 @@
     "analytics_v4": {
       "type": "boolean",
       "default": false
+    },
+    "ad_id": {
+      "type": "string",
+      "unique": true
     }
   }
 }

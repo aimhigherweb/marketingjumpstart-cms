@@ -573,6 +573,9 @@
               "analytics_v4": {
                 "type": "boolean"
               },
+              "ad_id": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },

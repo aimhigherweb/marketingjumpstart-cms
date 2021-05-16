@@ -649,6 +649,9 @@
           "analytics_v4": {
             "type": "boolean",
             "default": false
+          },
+          "ad_id": {
+            "type": "string"
           }
         }
       },
@@ -675,6 +678,9 @@
           "analytics_v4": {
             "type": "boolean",
             "default": false
+          },
+          "ad_id": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
