@@ -36,7 +36,7 @@
     },
     "google_analytics": {
       "type": "string",
-      "unique": true
+      "unique": false
     },
     "analytics_v4": {
       "type": "boolean",
@@ -44,7 +44,7 @@
     },
     "ad_id": {
       "type": "string",
-      "unique": true
+      "unique": false
     }
   }
 }
