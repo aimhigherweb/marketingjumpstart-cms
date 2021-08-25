@@ -652,6 +652,39 @@
           },
           "ad_id": {
             "type": "string"
+          },
+          "ad_reports": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "date_start",
+                "date_end"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "date_start": {
+                  "type": "string"
+                },
+                "date_end": {
+                  "type": "string"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "campaign_id": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -681,6 +714,12 @@
           },
           "ad_id": {
             "type": "string"
+          },
+          "ad_reports": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

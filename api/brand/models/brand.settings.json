@@ -45,6 +45,10 @@
     "ad_id": {
       "type": "string",
       "unique": false
+    },
+    "ad_reports": {
+      "via": "brand",
+      "collection": "ad-reports"
     }
   }
 }

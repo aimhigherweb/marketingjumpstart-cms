@@ -544,6 +544,56 @@
           "date_end": {
             "type": "string",
             "format": "date"
+          },
+          "brand": {
+            "required": [
+              "id",
+              "brand_id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "brand_id": {
+                "type": "uid"
+              },
+              "social_media": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "logo": {
+                "type": "string"
+              },
+              "google_analytics": {
+                "type": "string"
+              },
+              "analytics_v4": {
+                "type": "boolean"
+              },
+              "ad_id": {
+                "type": "string"
+              },
+              "ad_reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "campaign_id": {
+            "type": "string"
           }
         }
       },
@@ -560,6 +610,12 @@
           "date_end": {
             "type": "string",
             "format": "date"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "campaign_id": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "08/25/2021 10:48:48 AM"
+    "x-generation-date": "08/25/2021 10:53:36 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4361,6 +4361,56 @@
           "date_end": {
             "type": "string",
             "format": "date"
+          },
+          "brand": {
+            "required": [
+              "id",
+              "brand_id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "brand_id": {
+                "type": "uid"
+              },
+              "social_media": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "logo": {
+                "type": "string"
+              },
+              "google_analytics": {
+                "type": "string"
+              },
+              "analytics_v4": {
+                "type": "boolean"
+              },
+              "ad_id": {
+                "type": "string"
+              },
+              "ad_reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "campaign_id": {
+            "type": "string"
           }
         }
       },
@@ -4377,6 +4427,12 @@
           "date_end": {
             "type": "string",
             "format": "date"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "campaign_id": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -4524,6 +4580,39 @@
           },
           "ad_id": {
             "type": "string"
+          },
+          "ad_reports": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "date_start",
+                "date_end"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "date_start": {
+                  "type": "string"
+                },
+                "date_end": {
+                  "type": "string"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "campaign_id": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -4553,6 +4642,12 @@
           },
           "ad_id": {
             "type": "string"
+          },
+          "ad_reports": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"
@@ -4610,6 +4705,12 @@
               },
               "ad_id": {
                 "type": "string"
+              },
+              "ad_reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "created_by": {
                 "type": "string"

@@ -576,6 +576,12 @@
               "ad_id": {
                 "type": "string"
               },
+              "ad_reports": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
