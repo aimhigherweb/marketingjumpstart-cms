@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ad_reports",
+  "info": {
+    "name": "Ad Reports"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date_start": {
+      "type": "date",
+      "required": true
+    },
+    "date_end": {
+      "type": "date",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ad-reports",
+      "handler": "ad-reports.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ad-reports/count",
+      "handler": "ad-reports.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ad-reports/:id",
+      "handler": "ad-reports.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ad-reports",
+      "handler": "ad-reports.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ad-reports/:id",
+      "handler": "ad-reports.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ad-reports/:id",
+      "handler": "ad-reports.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
